@@ -3,6 +3,7 @@ import { createClient } from '@/utils/supabase/server';
 import DashboardGrid from '@/components/DashboardGrid';
 import Sidebar from '@/components/Sidebar';
 import SkeletonLoader from '@/components/SkeletonLoader';
+export const dynamic = 'force-dynamic';
 
 // Server Component for fetching data
 async function fetchCourses() {
