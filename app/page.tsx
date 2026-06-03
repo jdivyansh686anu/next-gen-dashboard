@@ -5,7 +5,7 @@ import Sidebar from '@/components/Sidebar';
 import SkeletonLoader from '@/components/SkeletonLoader';
 export const dynamic = 'force-dynamic';
 
-// Server Component for fetching data
+// Final fix for deployment
 async function fetchCourses() {
   const supabase = await createClient();
   const { data, error } = await supabase
