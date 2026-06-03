@@ -1,6 +1,6 @@
 'use client'; // Required for Framer Motion
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from "framer-motion";
 import * as Icons from 'lucide-react';
 
 interface Course {
@@ -18,10 +18,14 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 300, damping: 24 } },
-};
+const itemVariants: Variants = {
+     hidden: { opacity: 0, y: 20 },
+     visible: { 
+       opacity: 1, 
+       y: 0, 
+       transition: { type: "spring", stiffness: 100, damping: 10 } 
+     }
+   };
 
 export default function DashboardGrid({ courses }: { courses: Course[] }) {
   return (
